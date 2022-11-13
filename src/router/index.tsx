@@ -1,5 +1,6 @@
+import React, { lazy } from "react"
 import Home from "@/views/Home"
-import About from "@/views/About"
+const About = lazy(()=> import("@/views/About"));
 
 import { Navigate } from "react-router-dom"
 const routes = [
@@ -9,7 +10,7 @@ const routes = [
   },
   {
     path: "/home",
-    element: <Home />
+    element: <About />
   },
   {
     path: "/home",
